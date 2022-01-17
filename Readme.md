@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Кирилл Савинов](https://up.htmlacademy.ru/htmlcss/33/user/425671).
-* Наставник: `Неизвестно`.
+- Студент: [Кирилл Савинов](https://up.htmlacademy.ru/htmlcss/33/user/425671).
+- Наставник: [Константин Черепанов](https://htmlacademy.ru/profile/ccher).
 
 ---
 
