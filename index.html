@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
@@ -14,7 +15,7 @@
           <form action="#" method="POST">
             <label class="hidden" for="search-input">Текст поиска</label>
             <input class="search-input" type="text" name="search-text" id="search-input" placeholder="Текст поиска" />
-            <button class="search-submit" type="submit" value="Найти"></button>
+            <button class="search-submit" type="submit">Найти</button>
           </form>
         </div>
         <ul class="user-menu">
@@ -59,13 +60,13 @@
         </button>
 
         <ul class="promo-slider">
-          <li class="promo-slider-item">
+          <li class="promo-slider-item promo-slider-active">
             <h3 class="hidden">Квадрокоптер</h3>
             <img class="promo-slider-image" src="images/slider/slider-1.png" width="560" height="560" alt="Квадрокоптер" />
             <p class="promo-device-number">01</p>
             <p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
             <p class="promo-slogan-more">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a href="promo-more">Подробнее</a>
+            <a class="button promo-more" href="#">Подробнее</a>
             <dl>
               <dt>Дальность полета</dt>
               <dd>800м</dd>
@@ -80,7 +81,7 @@
             <p class="promo-device-number">02</p>
             <p class="promo-slogan">Худеем правильно!</p>
             <p class="promo-slogan-more">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-            <a href="promo-more">Подробнее</a>
+            <a class="button promo-more" href="#">Подробнее</a>
             <dl>
               <dt>Без подзарядки</dt>
               <dd>48 часов</dd>
@@ -93,7 +94,7 @@
             <p class="promo-device-number">03</p>
             <p class="promo-slogan">Делай селфи, как Бен Стиллер!</p>
             <p class="promo-slogan-more">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
-            <a href="promo-more">Подробнее</a>
+            <a class="button promo-more" href="#">Подробнее</a>
             <dl>
               <dt>Длина палки</dt>
               <dd>8,5 м</dd>
@@ -107,7 +108,7 @@
 
         <ul class="promo-chooser-list">
           <li class="promo-chooser-item">
-            <a class="promo-chooser-link" href="#">Квадрокоптер</a>
+            <a class="promo-chooser-link promo-chooser-link-active" href="#">Квадрокоптер</a>
           </li>
           <li class="promo-chooser-item">
             <a class="promo-chooser-link" href="#">Фитнес браслет</a>
@@ -123,22 +124,22 @@
         <h2 class="hidden">Ассортимент девайсов</h2>
         <ul class="device-category-list">
           <li class="device-category-item">
-            <a class="device-category-link" href="#">Виртуальная реальность</a>
+            <a class="device-category-link device-vr" href="#">Виртуальная реальность</a>
           </li>
           <li class="device-category-item">
-            <a class="device-category-link" href="#">Моноподы для селфи</a>
+            <a class="device-category-link device-monopod" href="#">Моноподы для селфи</a>
           </li>
           <li class="device-category-item">
-            <a class="device-category-link" href="#">Экшн-камеры</a>
+            <a class="device-category-link device-camera" href="#">Экшн-камеры</a>
           </li>
           <li class="device-category-item">
-            <a class="device-category-link" href="#">Фитнес-браслеты</a>
+            <a class="device-category-link device-band" href="#">Фитнес-браслеты</a>
           </li>
           <li class="device-category-item">
-            <a class="device-category-link" href="#">Умные часы</a>
+            <a class="device-category-link device-watch" href="#">Умные часы</a>
           </li>
           <li class="device-category-item">
-            <a class="device-category-link" href="#">Квадрокоптеры</a>
+            <a class="device-category-link device-quadro" href="#">Квадрокоптеры</a>
           </li>
         </ul>
       </section>
@@ -148,13 +149,13 @@
         <h2 class="hidden">Наши услуги</h2>
         <ul class="services-list">
           <li class="services-item">
-            <a class="services-item-link" href="#">Доставка</a>
+            <a class="button-services-active services-item-link" href="#">Доставка</a>
           </li>
           <li class="services-item">
-            <a class="services-item-link" href="#">Гарантия</a>
+            <a class="button services-item-link" href="#">Гарантия</a>
           </li>
           <li class="services-item">
-            <a class="services-item-link" href="#">Кредит</a>
+            <a class="button services-item-link" href="#">Кредит</a>
           </li>
         </ul>
         <ul class="services-descr-list">
@@ -188,7 +189,7 @@
           <li class="about-list-item">СДИК</li>
           <li class="about-list-item">ТоксБерри</li>
         </ul>
-        <button class="button button-about" type="button">Подробнее о нас</button>
+        <a class="button button-about" href="#">Подробнее о нас</a>
       </section>
 
       <!-- Блок контакты -->
@@ -205,7 +206,7 @@
           <li class="contacts-sched-item">пн—пт: с 10:00 до 22:00</li>
           <li class="contacts-sched-item">сб—вс: с 10:00 до 19:00</li>
         </ul>
-        <button class="button button-subscribe" type="button">Напишите нам</button>
+        <a class="button button-subscribe" href="#">Напишите нам</a>
       </section>
 
       <!-- Блок подписка -->
@@ -257,17 +258,17 @@
       <h2 class="hidden">Мы в соцсетях</h2>
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="fb-link" href="https://www.facebook.com/htmlacademy">
+          <a class="footer-social-link fb-link" href="https://www.facebook.com/htmlacademy">
             <span class="hidden">Фэйсбук</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="instagram-link" href="https://www.instagram.com/htmlacademy/">
+          <a class="footer-social-link instagram-link" href="https://www.instagram.com/htmlacademy/">
             <span class="hidden">Инстаграм</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="twitter-link" href="https://twitter.com/htmlacademy_ru">
+          <a class="footer-social-link twitter-link" href="https://twitter.com/htmlacademy_ru">
             <span class="hidden">Твиттер</span>
           </a>
         </li>

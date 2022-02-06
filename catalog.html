@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
     <header class="page-header">
@@ -28,7 +29,7 @@
             <a class="user-menu-link" href="#"><span class="icon icon-compare"></span>Сравнить</a>
           </li>
           <li class="user-menu-item">
-            <a class="user-menu-link" href="#"><span class="icon icon-basket">2</span>Корзина</a>
+            <a class="user-menu-link" href="#"><span class="icon icon-basket"></span>Корзина</a>
           </li>
         </ul>
         <ul class="navigation-list">
@@ -129,42 +130,42 @@
           <option value="non-expensive">Недорогие</option>
         </select>
 
-        <button class="button button-asc" type="button">
+        <button class="button-asc" type="button">
           <span class="visually-hidden">Прямая сортировка</span>
         </button>
-        <button class="button button-desc" type="button">
+        <button class="button-desc" type="button">
           <span class="visually-hidden">Обратная сортировка</span>
         </button>
 
         <ul class="product-list">
           <li class="product-card">
             <img class="product-card-image" src="images/products/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка" />
-            <a class="catalog-link" href="#">Любительскаяселфи-палка</a>
+            <a class="product-card-link" href="#">Любительская селфи-палка</a>
             <span class="product-card-price">500 ₽</span>
           </li>
           <li class="product-card">
             <img class="product-card-image" src="images/products/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" />
-            <a class="catalog-link" href="#">Профессиональная селфи-палка</a>
+            <a class="product-card-link" href="#">Профессиональная селфи-палка</a>
             <span class="product-card-price">1500 ₽</span>
           </li>
           <li class="product-card">
             <img class="product-card-image" src="images/products/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" />
-            <a class="catalog-link" href="#">Непотопляемая селфи-палка</a>
+            <a class="product-card-link" href="#">Непотопляемая селфи-палка</a>
             <span class="product-card-price">2500 ₽</span>
           </li>
           <li class="product-card">
             <img class="product-card-image" src="images/products/product-4.jpg" width="360" height="380" alt="Селфи-палка следуй за мной" />
-            <a class="catalog-link" href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a>
+            <a class="product-card-link" href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a>
             <span class="product-card-price">1500 ₽</span>
           </li>
         </ul>
 
-        <button class="button pagination-show-more" type="button">Загрузить еще</button>
+        <button class="pagination-show-more" type="button">Загрузить еще</button>
 
         <!-- Подстраничная навигация -->
         <ul class="pagination">
           <li class="pagination-item">
-            <a class="pagination-link pagination-prev" href="#">Назад</a>
+            <a class="pagination-prev" href="#">Назад</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-current" href="#">1</a>
@@ -182,7 +183,7 @@
             <a class="pagination-link" href="#">15</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link pagination-next" href="#">Вперед</a>
+            <a class="pagination-next" href="#">Вперед</a>
           </li>
         </ul>
       </section>
@@ -222,17 +223,17 @@
       <h2 class="hidden">Мы в соцсетях</h2>
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a class="fb-link" href="https://www.facebook.com/htmlacademy">
+          <a class="footer-social-link fb-link" href="https://www.facebook.com/htmlacademy">
             <span class="hidden">Фэйсбук</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="instagram-link" href="https://www.instagram.com/htmlacademy/">
+          <a class="footer-social-link instagram-link" href="https://www.instagram.com/htmlacademy/">
             <span class="hidden">Инстаграм</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a class="twitter-link" href="https://twitter.com/htmlacademy_ru">
+          <a class="footer-social-link twitter-link" href="https://twitter.com/htmlacademy_ru">
             <span class="hidden">Твиттер</span>
           </a>
         </li>
