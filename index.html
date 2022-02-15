@@ -8,7 +8,7 @@
   <body>
     <header class="content-wrapper page-header">
       <nav class="navigation">
-        <a href="#">
+        <a class="main-logo" href="#">
           <img src="images/logo.svg" width="145" height="37" alt="Логотип сайта" />
         </a>
         <div class="user-menu-wrapper">
@@ -31,7 +31,7 @@
         </div>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Каталог товаров</a>
+            <a class="navigation-link navigation-catalog" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка</a>
@@ -49,28 +49,32 @@
       <h1 class="hidden">Главная страница проекта «Девайс»</h1>
 
       <!-- промо блок -->
-      <section class="content-wrapper promo">
+      <section class="content-wrapper promo-wrapper">
         <h2 class="hidden">Лучшие продукты</h2>
 
         <ul class="promo-slider">
           <li class="promo-slider-item promo-slider-active">
             <h3 class="hidden">Квадрокоптер</h3>
             <img class="promo-slider-image" src="images/slider/slider-1.png" width="560" height="560" alt="Квадрокоптер" />
-            <div class="slidet-descr-wrapper">
+            <div class="slider-descr-wrapper">
               <p class="promo-device-number">01</p>
               <p class="promo-slogan">Порхает как бабочка, жалит как пчела!</p>
               <p class="promo-slogan-more">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               <a class="button promo-more" href="#">Подробнее</a>
               <dl>
-                <dt>Дальность полета</dt>
-                <dd>800м</dd>
-                <dt>Радиус поражения</dt>
-                <dd>50м</dd>
+                <div class="defenition-wrapper">
+                  <dt>Дальность полета</dt>
+                  <dd>800м</dd>
+                </div>
+                <div class="defenition-wrapper">
+                  <dt>Радиус поражения</dt>
+                  <dd>50м</dd>
+                </div>
               </dl>
             </div>
           </li>
 
-          <div class="promo-slider-item">
+          <li class="promo-slider-item">
             <h3 class="hidden">Фитнес браслет</h3>
             <img class="promo-slider-image" src="images/slider/slider-2.png" width="560" height="560" alt="Фитнес браслет" />
             <div class="slidet-descr-wrapper">
@@ -79,8 +83,10 @@
               <p class="promo-slogan-more">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               <a class="button promo-more" href="#">Подробнее</a>
               <dl>
-                <dt>Без подзарядки</dt>
-                <dd>48 часов</dd>
+                <div class="defenition-wrapper">
+                  <dt>Без подзарядки</dt>
+                  <dd>48 часов</dd>
+                </div>
               </dl>
             </div>
           </li>
@@ -94,21 +100,27 @@
               <p class="promo-slogan-more">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.</p>
               <a class="button promo-more" href="#">Подробнее</a>
               <dl>
-                <dt>Длина палки</dt>
-                <dd>8,5 м</dd>
-                <dt>Вес палки</dt>
-                <dd>5 кг</dd>
-                <dt>Материал</dt>
-                <dd>Карбон</dd>
+                <div class="defenition-wrapper">
+                  <dt>Длина палки</dt>
+                  <dd>8,5 м</dd>
+                </div>
+                <div class="defenition-wrapper">
+                  <dt>Вес палки</dt>
+                  <dd>5 кг</dd>
+                </div>
+                <div class="defenition-wrapper">
+                  <dt>Материал</dt>
+                  <dd>Карбон</dd>
+                </div>
               </dl>
             </div>
-          </li>  
+          </li>
         </ul>
 
-        <button class="promo-left-button" type="button">
+        <button class="promo-slider-button promo-slider-button-left" type="button">
           <span class="hidden">Предыдущий</span>
         </button>
-        <button class="promo-right-button" type="button">
+        <button class="promo-slider-button promo-slider-button-right" type="button">
           <span class="hidden">Следующий</span>
         </button>
 
@@ -126,7 +138,7 @@
       </section>
 
       <!-- Категории девайсов -->
-      <section class="content-wrapper device-category">
+      <section class="content-wrapper device-wrapper">
         <h2 class="hidden">Ассортимент девайсов</h2>
         <ul class="device-category-list">
           <li class="device-category-item">
@@ -167,23 +179,32 @@
           </ul>
           <ul class="services-descr-list">
             <li class="services-descr-item services-descr-active">
-              <h3 class="services-title">Доставка</h3>
-              <p class="services-descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <div class="services-descr-text-wrapper">
+                <h3 class="services-title">Доставка</h3>
+                <p class="services-descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              </div>
+              <img src="images/services/postman.png" width="136" height="164" alt="Силует почтальона" />
             </li>
             <li class="services-descr-item">
-              <h3 class="services-title">Гарантия</h3>
-              <p class="services-descr">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              <div class="services-descr-text-wrapper">
+                <h3 class="services-title">Гарантия</h3>
+                <p class="services-descr">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              </div>
+              <img src="images/services/service.png" width="171" height="195" alt="Силует почтальона" />
             </li>
             <li class="services-descr-item">
-              <h3 class="services-title">Кредит</h3>
-              <p class="services-descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+              <div class="services-descr-text-wrapper">
+                <h3 class="services-title">Кредит</h3>
+                <p class="services-descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для банка, разумеется.</p>
+              </div>
+              <img src="images/services/credit.png" width="156" height="188" alt="Силует почтальона" />
             </li>
           </ul>
         </div>
       </section>
 
       <!-- Промо доставки -->
-      <div class="content-wrapper">
+      <div class="content-wrapper delivery-promo-wrapper">
         <a class="delivery-promo-button" href="#">Доставим редкий товар под заказ <span class="delivery-promo-help"></span></a>
       </div>
 
@@ -204,7 +225,7 @@
         <!-- Блок контакты -->
         <section class="contacts">
           <h2 class="contacts-title">Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
+          <p>Вы можете забрать товар сами, заехав в наш офис. <br />Заодно сможете проверить работоспособность покупки.</p>
           <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
           <address class="contacts-address">
             <p>Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
@@ -223,14 +244,15 @@
       <section class="subscription">
         <div class="content-wrapper">
           <h2 class="hidden">Рассылка</h2>
-          <p class="subscription-welcome">Подпишитесь на рассылку</p>
-          <p class="subscription-descr">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
-
+          <div class="subscription-text-wrapper">
+            <p class="subscription-welcome">Подпишитесь на рассылку</p>
+            <p class="subscription-descr">Еженедельный дайджест с обзорами новинок, <br />длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
+          </div>
           <form class="subscription-form" action="#" method="post">
             <label for="email" class="hidden">E-mail:</label>
             <input class="subscription-input" placeholder="Ваш e-mail" type="email" name="email" id="email" required />
             <button class="subscription-button" type="submit">Подписаться</button>
-            <span class="subscription-ok">Это бесплатно</span>
+            <p class="subscription-ok">Это бесплатно</p>
           </form>
         </div>
       </section>
@@ -239,8 +261,8 @@
     <!-- Подвал -->
     <footer class="page-footer">
       <div class="content-wrapper footer-wrapper">
-        <div class="footer-right-block">
-          <a href="#">
+        <div class="footer-left-block">
+          <a class="main-logo" href="index.html">
             <img src="images/logo_yellow.svg" width="145" height="37" alt="Логотип сайта" />
           </a>
 
@@ -287,9 +309,7 @@
 
         <div class="footer-right-block">
           <h2 class="hidden">Телефон для связи</h2>
-          <p class="about-text">
-            <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-          </p>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
 
           <a class="htmlacademy-link" href="https://htmlacademy.ru">
             <img src="images/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy" />

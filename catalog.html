@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header class="page-header">
+    <header class="content-wrapper page-header inner-header">
       <nav class="navigation">
-        <a href="index.html">
+        <a class="main-logo" href="index.html">
           <img src="images/logo.svg" width="145" height="37" alt="Логотип сайта" />
         </a>
         <div class="user-menu-wrapper">
@@ -34,7 +34,7 @@
         </div>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Каталог товаров</a>
+            <a class="navigation-link navigation-catalog" href="#">Каталог товаров</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка</a>
@@ -50,7 +50,7 @@
     </header>
 
     <main class="main-container">
-      <div class="content-wrapper">
+      <div class="content-wrapper inner-title-wrapper">
         <h1 class="inner-header-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
@@ -129,20 +129,21 @@
           </div>
 
           <div class="products-wrapper">
-            <h3 class="filters-title">Сортировка:</h3>
-            <select class="select-control" aria-label="Сортировка">
-              <option value="popular">Популярные</option>
-              <option value="expensive">Дорогие</option>
-              <option value="non-expensive">Недорогие</option>
-            </select>
+            <div class="sort-controls-wrapper">
+              <h3 class="filters-title">Сортировка:</h3>
+              <select class="select-control" aria-label="Сортировка">
+                <option value="popular">Популярные</option>
+                <option value="expensive">Дорогие</option>
+                <option value="non-expensive">Недорогие</option>
+              </select>
 
-            <button class="button-asc" type="button">
-              <span class="visually-hidden">Прямая сортировка</span>
-            </button>
-            <button class="button-desc" type="button">
-              <span class="visually-hidden">Обратная сортировка</span>
-            </button>
-
+              <button class="button-sort button-asc" type="button">
+                <span class="hidden">Прямая сортировка</span>
+              </button>
+              <button class="button-sort button-desc" type="button">
+                <span class="hidden">Обратная сортировка</span>
+              </button>
+            </div>
             <div class="product-list-wrapper">
               <ul class="product-list">
                 <li class="product-card">
@@ -202,8 +203,8 @@
     <!-- Подвал -->
     <footer class="page-footer">
       <div class="content-wrapper footer-wrapper">
-        <div class="footer-right-block">
-          <a href="#">
+        <div class="footer-left-block">
+          <a class="main-logo" href="index.html">
             <img src="images/logo_yellow.svg" width="145" height="37" alt="Логотип сайта" />
           </a>
 
@@ -250,9 +251,7 @@
 
         <div class="footer-right-block">
           <h2 class="hidden">Телефон для связи</h2>
-          <p class="about-text">
-            <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
-          </p>
+          <a class="footer-contacts-phone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
 
           <a class="htmlacademy-link" href="https://htmlacademy.ru">
             <img src="images/htmlacademy_logo.svg" width="115" height="33" alt="логотип htmlacademy" />
