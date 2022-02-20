@@ -960,11 +960,23 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 360px 360px;
+  gap: 40px;
+}
+
+.product-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 360px;
+  height: 452px;
 }
 
 .product-card-image {
   display: block;
   background-color: #ffffff;
+  margin-bottom: 32px;
 }
 
 .product-card-link {
@@ -974,6 +986,8 @@ body {
   color: inherit;
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: block;
+  width: 230px;
 }
 
 .product-card-price {
