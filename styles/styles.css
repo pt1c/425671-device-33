@@ -117,7 +117,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   font-weight: 800;
-  margin: 35px 0 16px 0;
+  margin: 33px 0 9px 0;
 }
 
 .content-wrapper {
@@ -173,7 +173,7 @@ body {
 }
 
 .user-menu-item {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .user-menu-item:first-child {
@@ -233,6 +233,7 @@ body {
   top: -3px;
   left: 2px;
   background-image: url("../images/ui/cart.svg");
+  margin-left: 12px;
 }
 
 .icon-cart::after {
@@ -406,12 +407,26 @@ body {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
   list-style: none;
 }
 
 .breadcrumbs-item {
-  margin-right: 36px;
+  position: relative;
+  margin-right: 38px;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: -21px;
+  display: block;
+  width: 4px;
+  height: 7px;
+  background-image: url("../images/ui/arrow-small-right.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .breadcrumbs-link {
@@ -1042,6 +1057,8 @@ body {
 
 .filters-wrapper {
   width: 320px;
+  margin-top: 10px;
+  margin-left: 60px;
 }
 
 .products-wrapper {
@@ -1061,10 +1078,10 @@ body {
 }
 
 .sort-controls-wrapper .filters-title {
-  margin-left: 40px;
+  letter-spacing: 0.1em;
 }
 
-.filters-title {
+.filters-group-title {
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -1072,10 +1089,11 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
+  margin-bottom: 20px;
 }
 
-.filters-group {
-  border: none;
+.filters-group-title-color {
+  margin-bottom: 17px;
 }
 
 .filter-item-label {
@@ -1092,10 +1110,17 @@ body {
   align-items: center;
   height: 70px;
   box-sizing: border-box;
+  margin: auto 40px;
 }
 
 .select-control {
   margin: auto;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.1em;
+  background-color: transparent;
+  border: none;
 }
 
 .button-sort {
@@ -1147,28 +1172,87 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 360px;
-  height: 452px;
+  height: 456px;
 }
 
 .product-card-image {
   display: block;
   background-color: #ffffff;
-  margin-bottom: 32px;
+  width: 360px;
+  height: 380px;
 }
 
 .product-card-link {
+  display: flex;
+  flex-direction: column;
+  font-family: "Rubik", sans-serif;
+  text-decoration: none;
+  color: #000000;
+  position: relative;
+}
+
+.product-card-overlay {
+  position: absolute;
+  background-color: rgba(244, 244, 244, 0.8);
+  width: 360px;
+  height: 380px;
+  display: none;
+}
+
+.product-card-info {
+  width: 220px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: linear-gradient(to bottom, transparent 16px, #ffe17f 16px, #ffe17f 24px, transparent 24px);
+  margin: 170px auto;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  line-height: 21px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.product-card-title {
+  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
-  font-weight: 800;
-  color: inherit;
-  text-decoration: none;
-  letter-spacing: -0.02em;
-  display: block;
-  width: 230px;
+  margin: 0;
+  width: 240px;
 }
 
 .product-card-price {
   line-height: 21px;
+  margin: 0;
+}
+
+.product-card-link:hover .product-card-title,
+.product-card-link:hover .product-card-price {
+  opacity: 0.6;
+}
+
+.product-card-link:hover .product-card-overlay,
+.product-card-link:active .product-card-overlay {
+  display: block;
+}
+
+.product-card-link:active .product-card-info {
+  background: linear-gradient(to bottom, transparent 16px, #ffc700 16px, #ffc700 24px, transparent 24px);
+}
+
+.product-card-link:active .product-card-wrapper {
+  opacity: 0.3;
 }
 
 .pagination-show-more {
@@ -1183,7 +1267,7 @@ body {
   width: 100%;
   height: 55px;
   box-sizing: border-box;
-  margin: 44px 0px 44px 0;
+  margin: 41px 0px 44px 0;
 }
 
 .pagination-show-more:hover {
@@ -1217,7 +1301,7 @@ body {
   font-weight: 400;
   color: inherit;
   text-decoration: none;
-  padding: 10px 16px;
+  padding: 10px 14px;
   opacity: 0.3;
 }
 
@@ -1426,9 +1510,34 @@ body {
 }
 
 /* filters */
+.filters {
+  position: relative;
+}
+
 .filters-group {
   margin: 0px;
   padding: 0px;
+  border: none;
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.filters-group:last-of-type {
+  margin-bottom: 20px;
+}
+
+.filters-group::before {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 2px;
+  position: absolute;
+  top: -52px;
+  background-color: #000000;
+}
+
+.filters-group:first-child {
+  margin-top: 70px;
 }
 
 .filters-list {
@@ -1437,8 +1546,18 @@ body {
   padding: 0px;
 }
 
-/* checkbox */
-.checkbox-label {
+.filters-item {
+  margin-bottom: 5px;
+}
+
+.filters-button {
+  width: 220px;
+}
+
+/* checkbox + radio */
+.checkbox-label,
+.radio-label {
+  position: relative;
   padding-left: 36px;
   font-family: "Rubik", sans-serif;
   font-style: normal;
@@ -1446,9 +1565,11 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #000000;
+  cursor: pointer;
 }
 
-.checkbox-input {
+.checkbox-input,
+.radio-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1459,8 +1580,8 @@ body {
 .checkbox-mimic {
   position: absolute;
   box-sizing: border-box;
-  margin-top: 5px;
-  margin-left: -36px;
+  top: 0;
+  left: 0;
   width: 20px;
   height: 20px;
   overflow: hidden;
@@ -1471,7 +1592,148 @@ body {
   border: 2px solid #cccccc;
 }
 
+.radio-mimic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+}
+
 .checkbox-input:checked + .checkbox-mimic {
   background-image: url("../images/ui/checkbox-on.svg");
   border: 2px solid #000000;
+}
+
+.radio-input:checked + .radio-mimic {
+  border-color: #000000;
+}
+
+.radio-input:checked + .radio-mimic::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.checkbox-input:hover + .checkbox-mimic,
+.checkbox-input:hover + .checkbox-mimic + .checkbox-text,
+.radio-input:hover + .radio-mimic,
+.radio-input:hover + .radio-mimic + .radio-text {
+  opacity: 0.6;
+}
+
+.checkbox-input:active + .checkbox-mimic,
+.checkbox-input:active + .checkbox-mimic + .checkbox-text,
+.radio-input:active + .radio-mimic,
+.radio-input:active + .radio-mimic + .radio-text {
+  opacity: 0.3;
+}
+
+.checkbox-input:disabled + .checkbox-mimic,
+.checkbox-input:disabled + .checkbox-mimic + .checkbox-text,
+.radio-input:disabled + .radio-mimic,
+.radio-input:disabled + .radio-mimic + .radio-text {
+  opacity: 0.1;
+  cursor: default;
+}
+
+.checkbox-input:focus + .checkbox-mimic,
+.radio-input:focus + .radio-mimic {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+/* range */
+.range-track {
+  position: relative;
+  width: 200px;
+  height: 2px;
+  margin-bottom: 11px;
+  margin-top: 10px;
+  background-color: #dcdcdc;
+}
+
+.range-track-active {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range-button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  background-color: #ebebeb;
+  cursor: pointer;
+}
+
+.range-button-min {
+  top: -8px;
+  left: -9px;
+}
+
+.range-button-max {
+  top: -8px;
+  right: -9px;
+}
+
+.range-button:hover {
+  border-color: rgba(0, 0, 0, 0.6);
+}
+
+.range-button:active {
+  background-color: #000000;
+  opacity: 1;
+}
+
+.range-text-wrapper {
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.range-text-label {
+  display: flex;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.3;
+}
+
+.range-text-label:first-of-type {
+  margin-left: -14px;
+}
+
+.range-text-label:last-of-type {
+  margin-right: -28px;
+}
+
+.range-text-input {
+  width: 11px;
+  padding: 0 2px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.range-text-input::-webkit-outer-spin-button,
+.range-text-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
 }

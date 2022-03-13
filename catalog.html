@@ -75,72 +75,87 @@
             <h3 class="catalog-title">Фильтр:</h3>
             <form class="filters" action="https://echo.htmlacademy.ru/" method="POST">
               <fieldset class="filters-group">
-                <legend class="filters-title">Стоимость</legend>
-                <input class="filters-slider" name="price" type="range" min="0" max="8000" value="5000" step="1" />
-                <span id="price-from">От 0</span>
-                <span id="price-to">До 5000</span>
+                <legend class="filters-group-title">Стоимость</legend>
+                <div class="range">
+                  <div class="range-track">
+                    <div class="range-track-active">
+                      <button class="range-button range-button-min" type="button">
+                        <span class="hidden">Цена от</span>
+                      </button>
+                      <button class="range-button range-button-max" type="button">
+                        <span class="hidden">Цена до</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="range-text-wrapper">
+                    <label class="range-text-label"> от <input class="range-text-input" type="number" value="0" name="min-price" /> </label>
+                    <label class="range-text-label"> до <input class="range-text-input" type="number" value="5000" name="max-price" style="width: 37px" /> </label>
+                  </div>
+                </div>
               </fieldset>
 
               <fieldset class="filters-group">
-                <legend class="filters-title">Цвет</legend>
+                <legend class="filters-group-title filters-group-title-color">Цвет</legend>
                 <ul class="filters-list">
                   <li class="filters-item">
                     <label class="checkbox-label">
                       <input class="checkbox-input" type="checkbox" name="black" checked />
                       <span class="checkbox-mimic"></span>
-                      Черный
+                      <span class="checkbox-text">Черный</span>
                     </label>
                   </li>
                   <li class="filters-item">
                     <label class="checkbox-label">
                       <input class="checkbox-input" type="checkbox" name="white" checked />
                       <span class="checkbox-mimic"></span>
-                      Белый
+                      <span class="checkbox-text">Белый</span>
                     </label>
                   </li>
                   <li class="filters-item">
                     <label class="checkbox-label">
                       <input class="checkbox-input" type="checkbox" name="blue" />
                       <span class="checkbox-mimic"></span>
-                      Синий
+                      <span class="checkbox-text">Синий</span>
                     </label>
                   </li>
                   <li class="filters-item">
                     <label class="checkbox-label">
                       <input class="checkbox-input" type="checkbox" name="red" />
                       <span class="checkbox-mimic"></span>
-                      Красный
+                      <span class="checkbox-text">Красный</span>
                     </label>
                   </li>
                   <li class="filters-item">
                     <label class="checkbox-label">
                       <input class="checkbox-input" type="checkbox" name="pink" />
                       <span class="checkbox-mimic"></span>
-                      Розовый
+                      <span class="checkbox-text">Розовый</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
 
               <fieldset class="filters-group">
-                <legend class="filters-title">Bluetooth</legend>
+                <legend class="filters-group-title">Bluetooth</legend>
                 <ul class="filters-list">
                   <li class="filters-item">
-                    <label class="bluetooth-filter-item" for="true">
-                      <input type="radio" id="true" name="bluetooth" value="true" checked />
-                      Есть
+                    <label class="radio-label">
+                      <input class="radio-input" type="radio" name="bt-option" value="1" checked />
+                      <span class="radio-mimic"></span>
+                      <span class="radio-text">Есть</span>
                     </label>
                   </li>
                   <li class="filters-item">
-                    <label class="bluetooth-filter-item" for="false">
-                      <input type="radio" id="false" name="bluetooth" value="false" />
-                      Нет
+                    <label class="radio-label">
+                      <input class="radio-input" type="radio" name="bt-option" value="0" />
+                      <span class="radio-mimic"></span>
+                      <span class="radio-text">Нет</span>
                     </label>
                   </li>
                 </ul>
               </fieldset>
 
-              <button class="button button-submit" type="submit">Показать</button>
+              <button class="button button-submit filters-button" type="submit">Показать</button>
             </form>
           </div>
 
@@ -163,24 +178,47 @@
             <div class="product-list-wrapper">
               <ul class="product-list">
                 <li class="product-card">
-                  <img class="product-card-image" src="images/products/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка" />
-                  <a class="product-card-link" href="#">Любительская селфи-палка</a>
-                  <span class="product-card-price">500&nbsp;₽</span>
+                  <a class="product-card-link" href="product.html">
+                    <div class="product-card-overlay"><span class="product-card-info">Подробнее</span></div>
+                    <img class="product-card-image" src="images/products/product-1.jpg" width="360" height="380" alt="Стандартная селфи-палка для смартфона." />
+                    <div class="product-card-wrapper">
+                      <h3 class="product-card-title">Любительская<br />селфи-палка</h3>
+                      <p class="product-card-price">500 ₽</p>
+                    </div>
+                  </a>
                 </li>
                 <li class="product-card">
-                  <img class="product-card-image" src="images/products/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка" />
-                  <a class="product-card-link" href="#">Профессиональная селфи-палка</a>
-                  <span class="product-card-price">1500&nbsp;₽</span>
+                  <a class="product-card-link" href="product.html">
+                    <div class="product-card-overlay"><span class="product-card-info">Подробнее</span></div>
+                    <img class="product-card-image" src="images/products/product-2.jpg" width="360" height="380" alt="Длинная селфи-палка с управлением." />
+                    <div class="product-card-wrapper">
+                      <h3 class="product-card-title">Профессиональная<br />селфи-палка</h3>
+                      <p class="product-card-price">1 500 ₽</p>
+                    </div>
+                  </a>
                 </li>
                 <li class="product-card">
-                  <img class="product-card-image" src="images/products/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка" />
-                  <a class="product-card-link" href="#">Непотопляемая селфи-палка</a>
-                  <span class="product-card-price">2500&nbsp;₽</span>
+                  <a class="product-card-link" href="product.html">
+                    <div class="product-card-overlay"><span class="product-card-info">Подробнее</span></div>
+                    <img class="product-card-image" src="images/products/product-3.jpg" width="360" height="380" alt="Яркая селфи-палка в форме поплавка для экшн-камеры." />
+                    <div class="product-card-wrapper">
+                      <h3 class="product-card-title">Непотопляемая<br />селфи-палка</h3>
+                      <p class="product-card-price">2 500 ₽</p>
+                    </div>
+                  </a>
                 </li>
                 <li class="product-card">
-                  <img class="product-card-image" src="images/products/product-4.jpg" width="360" height="380" alt="Селфи-палка следуй за мной" />
-                  <a class="product-card-link" href="#">Селфи-палка &laquo;Следуй за мной&raquo;</a>
-                  <span class="product-card-price">1500&nbsp;₽</span>
+                  <a class="product-card-link" href="product.html">
+                    <div class="product-card-overlay"><span class="product-card-info">Подробнее</span></div>
+                    <img class="product-card-image" src="images/products/product-4.jpg" width="360" height="380" alt="Селфи-палка в форме руки." />
+                    <div class="product-card-wrapper">
+                      <h3 class="product-card-title">
+                        Селфи-палка «Следуй<br />
+                        за мной»
+                      </h3>
+                      <p class="product-card-price">1 500 ₽</p>
+                    </div>
+                  </a>
                 </li>
               </ul>
 
