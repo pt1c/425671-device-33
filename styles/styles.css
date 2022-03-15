@@ -339,27 +339,24 @@ body {
   opacity: 0.3;
 }
 
-.navigation-catalog:hover:after {
+.navigation-dropdown-handler:hover .navigation-catalog::after {
   opacity: 1;
-}
-
-.navigation-dropdown-close ~ .navigation-dropdown-list {
-  display: none;
-}
-
-.navigation-item:focus-within > .navigation-dropdown-list {
-  display: flex;
-}
-
-.navigation-item:focus-within > .navigation-catalog::after {
   background: linear-gradient(#000000, #000000), transparent;
   background-position: center;
   background-size: 16px 2px;
   background-repeat: no-repeat;
 }
 
-.navigation-dropdown-list {
+.navigation-dropdown-handler:hover .navigation-dropdown-wrapper {
   display: flex;
+}
+
+.navigation-catalog:hover::after {
+  opacity: 1;
+}
+
+.navigation-dropdown-wrapper {
+  display: none;
   box-sizing: border-box;
   width: 1160px;
   height: 180px;
@@ -372,6 +369,21 @@ body {
   line-height: 34px;
   list-style: none;
   background-color: #ffe17f;
+}
+
+.navigation-dropdown-wrapper::before {
+  content: "";
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  left: 55px;
+  top: -15px;
+}
+
+.navigation-dropdown-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navigation-dropdown-link {
@@ -2179,7 +2191,16 @@ body {
 }
 
 /* popover корзины */
+.user-menu-cart:hover .popover {
+  display: block;
+}
+
+.user-menu-cart:hover .user-menu-link {
+  opacity: 0.6;
+}
+
 .popover {
+  display: none;
   box-sizing: border-box;
   width: 320px;
   min-height: 217px;
@@ -2200,6 +2221,14 @@ body {
   left: 155px;
   background-color: #000000;
   transform: rotate(45deg);
+}
+
+.popover::after {
+  content: "";
+  width: 320px;
+  height: 13px;
+  position: absolute;
+  top: -12px;
 }
 
 .popover-content {
@@ -2330,8 +2359,4 @@ body {
 .cart-open-button:disabled {
   opacity: 0.3;
   cursor: default;
-}
-
-.popover-close {
-  display: none;
 }
