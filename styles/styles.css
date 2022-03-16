@@ -1564,6 +1564,7 @@ body {
 .footer-navigation-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 456px;
   padding: 0;
   margin: 0;
   margin-bottom: 62px;
@@ -1574,7 +1575,7 @@ body {
   margin-right: 35px;
 }
 
-.footer-navigation-item:last-of-type {
+.footer-navigation-item:nth-child(3n) {
   margin-right: 0;
 }
 
