@@ -28,78 +28,83 @@
             <li class="user-menu-item">
               <a class="user-menu-link" href="#"><span class="icon icon-compare"></span>Сравнить</a>
             </li>
-            <li class="user-menu-item">
+            <li class="user-menu-item user-menu-cart">
               <a class="user-menu-link" href="#"><span class="icon icon-cart" data-items-count="2"></span>Корзина</a>
+              <div class="popover popover-cart">
+                <div class="popover-content">
+                  <h2 class="hidden">Корзина</h2>
+                  <ul class="cart-items-list">
+                    <li class="popover-cart-item">
+                      <a class="cart-item-link" href="#">
+                        <img class="cart-item-image" src="images/products/cart-1.jpg" width="39" height="43" alt="Любительская селфи-палка" />
+                        <span class="cart-item-text">Любительская селфи-палка</span>
+                      </a>
+                      <button class="cart-item-button-close" type="button">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white" />
+                        </svg>
+                        <span class="hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                    <li class="popover-cart-item">
+                      <a class="cart-item-link" href="#">
+                        <img class="cart-item-image" src="images/products/cart-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка" />
+                        <span class="cart-item-text">Профессиональная селфи-палка</span>
+                      </a>
+                      <button class="cart-item-button-close" type="button">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white" />
+                        </svg>
+                        <span class="hidden">Удалить из корзины</span>
+                      </button>
+                    </li>
+                  </ul>
+                  <div class="popover-cart-total">
+                    <p class="popover-total -text popover-goods">Товаров: 2</p>
+                    <p class="popover-total -text popover-sum">Сумма: 2000 ₽</p>
+                  </div>
+                  <button class="cart-open-button" type="button">Открыть корзину</button>
+                </div>
+              </div>
             </li>
           </ul>
-
-          <div class="popover popover-cart popover-close">
-            <div class="popover-content">
-              <h2 class="hidden">Корзина</h2>
-              <ul class="cart-items-list">
-                <li class="popover-cart-item">
-                  <a class="cart-item-link" href="#">
-                    <img class="cart-item-image" src="../images/products/cart-1.jpg" width="39" height="43" alt="Любительская селфи-палка" />
-                    <span class="cart-item-text">Любительская селфи-палка</span>
-                  </a>
-                  <button class="cart-item-button-close" type="button">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white" />
-                    </svg>
-                    <span class="hidden">Удалить из корзины</span>
-                  </button>
-                </li>
-                <li class="popover-cart-item">
-                  <a class="cart-item-link" href="#">
-                    <img class="cart-item-image" src="../images/products/cart-2.jpg" width="39" height="43" alt="Профессиональная селфи-палка" />
-                    <span class="cart-item-text">Профессиональная селфи-палка</span>
-                  </a>
-                  <button class="cart-item-button-close" type="button">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 0.909091L9.09091 0L5 4.09091L0.909091 0L0 0.909091L4.09091 5L0 9.09091L0.909091 10L5 5.90909L9.09091 10L10 9.09091L5.90909 5L10 0.909091Z" fill="white" />
-                    </svg>
-                    <span class="hidden">Удалить из корзины</span>
-                  </button>
-                </li>
-              </ul>
-              <div class="popover-cart-total">
-                <p class="popover-total -text popover-goods">Товаров: 2</p>
-                <p class="popover-total -text popover-sum">Сумма: 2000 ₽</p>
-              </div>
-              <button class="cart-open-button" type="button">Открыть корзину</button>
-            </div>
-          </div>
         </div>
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <button class="navigation-link navigation-catalog navigation-dropdown-close" type="button" name="navigation-catalog">Каталог товаров</button>
+          <li class="navigation-item navigation-dropdown-handler">
+            <a class="navigation-link navigation-catalog" href="catalog.html">Каталог товаров</a>
             <!-- drop-down меню -->
-            <ul class="navigation-dropdown-list">
+            <div class="navigation-dropdown-wrapper">
               <div class="navigation-column-wrapper">
-                <li class="navigation-dropdown-item">
-                  <a href="#" class="navigation-dropdown-link">Виртуальная реальность</a>
-                </li>
-                <li class="navigation-dropdown-item">
-                  <a href="catalog.html" class="navigation-dropdown-link">Моноподы для cелфи</a>
-                </li>
-                <li class="navigation-dropdown-item">
-                  <a href="#" class="navigation-dropdown-link">Экшн-камеры</a>
-                </li>
+                <ul class="navigation-dropdown-list">
+                  <li class="navigation-dropdown-item">
+                    <a href="#" class="navigation-dropdown-link">Виртуальная реальность</a>
+                  </li>
+                  <li class="navigation-dropdown-item">
+                    <a href="catalog.html" class="navigation-dropdown-link">Моноподы для cелфи</a>
+                  </li>
+                  <li class="navigation-dropdown-item">
+                    <a href="#" class="navigation-dropdown-link">Экшн-камеры</a>
+                  </li>
+                </ul>
               </div>
               <div class="navigation-column-wrapper">
-                <li class="navigation-dropdown-item">
-                  <a href="#" class="navigation-dropdown-link">Фитнес-браслеты</a>
-                </li>
-                <li class="navigation-dropdown-item">
-                  <a href="#" class="navigation-dropdown-link">Умные часы</a>
-                </li>
+                <ul class="navigation-dropdown-list">
+                  <li class="navigation-dropdown-item">
+                    <a href="#" class="navigation-dropdown-link">Фитнес-браслеты</a>
+                  </li>
+                  <li class="navigation-dropdown-item">
+                    <a href="#" class="navigation-dropdown-link">Умные часы</a>
+                  </li>
+                </ul>
               </div>
               <div class="navigation-column-wrapper">
-                <li class="navigation-dropdown-item">
-                  <a href="#" class="navigation-dropdown-link">Квадрокоптеры</a>
-                </li>
+                <ul class="navigation-dropdown-list">
+                  <li class="navigation-dropdown-item">
+                    <a href="#" class="navigation-dropdown-link">Квадрокоптеры</a>
+                  </li>
+                </ul>
               </div>
-            </ul>
+            </div>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка</a>
@@ -159,7 +164,7 @@
               </fieldset>
 
               <fieldset class="filters-group">
-                <legend class="filters-group-title filters-group-title-color">Цвет</legend>
+                <legend class="filters-group-title">Цвет</legend>
                 <ul class="filters-list">
                   <li class="filters-item">
                     <label class="checkbox-label">
@@ -286,7 +291,7 @@
                 </li>
               </ul>
 
-              <button class="pagination-show-more" type="button">Загрузить еще</button>
+              <button class="pagination-show-more" type="button">Загрузить ещё</button>
 
               <!-- Постраничная навигация -->
               <ul class="pagination">
@@ -309,7 +314,7 @@
                   <a class="pagination-link" href="#">15</a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-next" href="#">Вперед</a>
+                  <a class="pagination-next" href="#">Вперёд</a>
                 </li>
               </ul>
             </div>
