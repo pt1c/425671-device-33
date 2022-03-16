@@ -774,7 +774,6 @@ body {
 /* Услуги доставки */
 .services {
   background: linear-gradient(180deg, transparent 100px, #f0f0f0 100px 100%);
-  /* background-color: #f0f0f0; */
 }
 
 .services-wrapper {
@@ -2037,6 +2036,16 @@ body {
   background-position: center right 22px;
 }
 
+.delivery-error-text {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #ff3d3d;
+  display: none;
+}
+
 .delivery-field-email:hover {
   background-color: #dcdcdc;
 }
@@ -2044,6 +2053,10 @@ body {
 .delivery-field-email:invalid {
   outline: 2px solid #ff3d3d;
   outline-offset: 0;
+}
+
+.delivery-field-email:invalid + .delivery-error-text {
+  display: inline;
 }
 
 .delivery-field-email:disabled {
